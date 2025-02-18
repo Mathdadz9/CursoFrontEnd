@@ -1,28 +1,67 @@
-//estrutura de dados 
+// Estrutura de dados e condicionais (if else / switch case) 
 
-//condicionais ( if Else /Switch case)
-//if 
-var precoProduto = 150;
-if (valorProco >=100){
-    console.log("valor a pagar: "+(precoProduto*0.9)
-    )
-} else{
-    console.log("valor a pagar" +(precoProduto))
+// Definindo o preço do produto
+var precoProduto = 150;  
+
+// Condicional if-else 
+if (precoProduto >= 100) {     
+    console.log("Valor a pagar: " + (precoProduto * 0.9));   
+} else {     
+    console.log("Valor a pagar: " + precoProduto);   
+}  
+
+// Definindo o mês 
+var mes = 2;  
+
+// Condicional switch case
+switch (mes) {     
+    case 1:         
+        console.log("Janeiro");         
+        break;     
+    case 2:         
+        console.log("Fevereiro");         
+        break;     
+    case 3:         
+        console.log("Março");         
+        break;     
+    default:         
+        console.log("Outro mês");         
+        break; 
+}  
+
+// Estrutura de Repetição
+
+// for (contáveis)
+for (let i = 0; i <= 100; i++) {     
+    console.log(i);  
+}  
+
+// while (Incontáveis)
+var continuar = true; // Condição de parada
+var numeroEscolhido = 3; 
+var contador = 0;
+
+while (continuar) { 
+    // A parada acontece quando continuar for false
+    contador++; 
+    let numeroSorteado = Math.round(Math.random()*10); 
+    if (numeroEscolhido == numeroSorteado) {                   
+        continuar = false;
+        console.log("Acertou miseravi");
+    } 
+    
+    console.log("Tentativas: " + contador); 
 }
 
+//funçôes (ação especifica) podendo ser chamada a qualquer momento 
+//Momento dentro do codigo 
 
-//switch case
-var mes = 2; 
-switch (key) {
-    case value:
-        console.log ("janeiro")
-        break;
-case 2:
-    console.log ("fevereiro")
-    break
-case 3: 
-    console.log("março")
-    default:
-        console.log("Outro Mes")
-        break;
+function ola (nome){ //function return 
+    return "Ola, "+nome;
 }
+ function hello (nome){ //function void 
+    console.log("Hello " +nome);
+ }
+console.log(ola("Matheus"));
+
+hello("Mathueus");
