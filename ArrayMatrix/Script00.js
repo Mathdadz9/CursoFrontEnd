@@ -38,21 +38,42 @@ for (let i = 0; i < arrayNumeros.length; i++) {
     console.log("índice [" + i + "] = " + arrayNumeros[i]);
 }
 
-//ForEach
+// ForEach
 arrayTexto.forEach(elemento => {
-    console.log(elemento)
-
+    console.log(elemento);
 });
 
-// metodos uteis
+// Métodos úteis
 
-//indexOf
-console.log(arrayNumeros.indexOf(5));//4
-console.log(arrayNumeros.indexOf(10));//-1 (elemento inexistente)
+// indexOf
+console.log(arrayNumeros.indexOf(5)); // 4
+console.log(arrayNumeros.indexOf(10)); // -1 (elemento inexistente)
 
-//splice (remover elemento da posião)
+// splice (remover elemento da posição)
+arrayMisto.splice(1, 2);
+console.log(arrayMisto);
 
-arrayMisto.splice(1, 2)
-console.log(arrayMisto)
+// Operações avançadas de arrays
+// map - novos valores
+let valores = [10, 20, 30, 40, 50];
+let valoresDobro = valores.map(x => x * 2);
+console.log(valoresDobro);
 
-//operaçoes avançasdas de arrays 
+// filter - comparação 
+let valoresFilter = valores.filter(x => x > 25);
+console.log(valoresFilter);
+
+// Desafio (Filtro x < 35 && triplicar o valor de (x * 3) = [30, 60, 90]
+let valoresDesafios = valores.filter(x => x < 35);
+let valoresTriplicados = valoresDesafios.map(x => x * 3);
+console.log(valoresTriplicados); 
+
+//reduce ([] -> let x)
+let soma = valores.reduce((ValorSoma, ValorElemento) => ValorSoma+ValorElemento);
+console.log(soma)
+
+//sort (organizar)
+let aleatorio  =[7,4,2,9,1,5,8,3,6];
+console.log(aleatorio);
+let ordenado = aleatorio.sort();
+console.log(ordenado);
