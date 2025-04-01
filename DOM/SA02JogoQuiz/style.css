@@ -1,9 +1,8 @@
 body{
-    font-family: comic sans ms;
+    font-family: Comic Sans MS;
     text-align: center;
     background-color: antiquewhite;
-    margin-top: center;
-
+    margin-top: 40px;
 }
 
 .quizContainer{
@@ -11,12 +10,12 @@ body{
     width: 50%;
     margin: auto;
     padding: 20px;
-    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
 }
 
 button{
-    pedding: 10px 15px;
-    margin: 10px ;
+    padding: 10px 15px;
+    margin: 10px;
     font-size: 16px;
     cursor: pointer;
     border: none;
@@ -27,5 +26,29 @@ button{
 button:disabled{
     background: gray;
     cursor: not-allowed;
+}
+
+/* criar a estilização do botão opcao */
+.opcao{
+    display: block;
+    padding: 10px;
+    background: lightblue;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.opcao:hover{
+    background: dodgerblue;
+    color: white;
+}
+
+.correta{
+    background: green !important;
+    color: white;
+}
+
+.errado{
+    background: red !important;
+    color: white;
 }
 
