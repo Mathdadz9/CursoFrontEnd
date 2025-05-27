@@ -13,31 +13,27 @@ export class DadosService {
 
   constructor() { }
 
-  //métodos
-  getClientes(): Cliente[]{
+  //métodos 
+  getClientes(): Cliente[]{ //método para listar todos os cliente do vetor
     return this.clientes;
   }
-
-  adicionarClientes(cliente: Cliente): void {
+  adicionarClientes(cliente: Cliente): void { // método para adicionAr um obj de cliente no vetor
     this.clientes.push(cliente);
   }
 
   getProdutos(): Produto[]{
     return this.produtos;
   }
-
-  adicionarProdutos(produto: Produto): void {
+  adicionarProduto(produto: Produto) : void{
     this.produtos.push(produto);
   }
 
   getPedidos(): Pedido[]{
     return this.pedidos;
   }
-
-  adicionarPedidos(pedido: Pedido): void {
+  adicionarPedidos(pedido: Pedido): void{
     this.pedidos.push(pedido);
   }
-
 
 }
 
