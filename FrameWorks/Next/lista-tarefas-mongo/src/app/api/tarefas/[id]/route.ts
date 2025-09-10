@@ -24,14 +24,7 @@ export async function PUT(req: NextRequest, {params}:{params:Parametros}){
     }
 }
 
-/*************  ✨ Windsurf Command ⭐  *************/
-/**
- * Requisi o DELETE para deletar uma tarefa com base no ID passado como par metro.
- * O ID   passado como par metro na URL, exemplo: /api/todo/1
- * Retorna um JSON com o status da opera o e o resultado.
- * @param {NextRequest} req - Requisi o HTTP
-
-/*******  42acd409-7237-4566-928e-67798c23669e  *******/export async function DELETE(req: NextRequest, {params}:{params:Parametros}){
+export async function DELETE(req: NextRequest, {params}:{params:Parametros}){
     try {
         const {id} = params;
         const resultado = await deleteTarefa(id);
