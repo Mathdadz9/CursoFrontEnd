@@ -25,7 +25,7 @@ Este Diagrama modela as principais entidades do sistema:
 - Ordem de Serviço (Service);
 
 
-## 📌 Diagrama de Classes
+```mermaid
 
 classDiagram
 
