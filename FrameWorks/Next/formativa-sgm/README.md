@@ -127,3 +127,24 @@ graph TD
     Usuario --> UC5
     Usuario --> UC3
 ```
+
+3. ### Diagrama de Fluxo 
+Detalhar o passo a passo que um usuario segue para se autenticar no sistema ao acessar o dashboard.
+
+#### Explicação:
+- O Fluxo começa quando osuário acessa a tela de login
+- Insere as credenciais( email e senha)
+- O sistema verifica se as credenciais são válidas
+    - se sim: gera um JWT (token) => dashboard
+    - se não: mensagem de erro eusuário permanece na tela de l
+    login
+
+```mermaid
+graph TD
+    A[Inicio] --> B[Acessas a Tela de Login]
+    b --> C[Preencher Email e Senha]
+    C --> D[Valida as Credenciais]
+    D --> Sim --> E[Gera um Token JWT]
+    E --> F[Dashboard]
+    D --> Não --> K[Mensagem de Erro]
+    K --> B
