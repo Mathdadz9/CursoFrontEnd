@@ -86,15 +86,15 @@ classDiagram
 ```mermaid
 graph TD
     subgraph "SGM"
-        caso1([Fazer Login])
-        caso2([Gerenciar Ordens de Serviço - CRUD])
-        caso3([Gerenciar Equipamentos - CRUD])
-        caso4([Gerenciar Usuários - CRUD])
-        caso5([Acessar o DashBoard])
-        caso6([Gerar Relatórios])
-        caso7([Atribuir Ordem de Serviço])
-        caso8([Atualizar Status de Ordem])
-        caso9([Pesquisar Equipamentos])
+        UC1([Fazer Login])
+        UC2([Gerenciar Ordens de Serviço - CRUD])
+        UC3([Gerenciar Equipamentos - CRUD])
+        UC4([Gerenciar Usuários - CRUD])
+        UC5([Acessar o DashBoard])
+        UC6([Gerar Relatórios])
+        UC7([Atribuir Ordem de Serviço])
+        UC8([Atualizar Status de Ordem])
+        UC9([Pesquisar Equipamentos])
     end
 
     Tecnico([Técnico de Manutenção])
@@ -103,27 +103,27 @@ graph TD
     Usuario([Usuário Comum])
 
     %% === Relacionamentos ===
-    Tecnico --> caso1
-    Tecnico --> caso2
-    Tecnico --> caso3
-    Tecnico --> caso5
-    Tecnico --> caso8
-    Tecnico --> caso9
+    Tecnico --> UC1
+    Tecnico --> UC2
+    Tecnico --> UC3
+    Tecnico --> UC5
+    Tecnico --> UC8
+    Tecnico --> UC9
 
-    Gestor --> caso1
-    Gestor --> caso2
-    Gestor --> caso3
-    Gestor --> caso5
-    Gestor --> caso6
-    Gestor --> caso7
-    Gestor --> caso8
+    Gestor --> UC1
+    Gestor --> UC2
+    Gestor --> UC3
+    Gestor --> UC5
+    Gestor --> UC6
+    Gestor --> UC7
+    Gestor --> UC8
 
-    Admin --> caso1
-    Admin --> caso4
-    Admin --> caso5
-    Admin --> caso6
+    Admin --> UC1
+    Admin --> UC4
+    Admin --> UC5
+    Admin --> UC6
 
-    Usuario --> caso1
-    Usuario --> caso5
-    Usuario --> caso3
+    Usuario --> UC1
+    Usuario --> UC5
+    Usuario --> UC3
 ```
