@@ -82,31 +82,48 @@ classDiagram
  Ilustrar as interações dos diferentes atores com o sistema. 
 
 
+
 ```mermaid
-
 graph TD
-    %% === Atores ===
-    Admin[Administrador]
-    User[Usuário]
-    Technician[Técnico]
+    subgraph "SGM"
+        caso1([Fazer Login])
+        caso2([Gerenciar Ordens de Serviço - CRUD])
+        caso3([Gerenciar Equipamentos - CRUD])
+        caso4([Gerenciar Usuários - CRUD])
+        caso5([Acessar o DashBoard])
+        caso6([Gerar Relatórios])
+        caso7([Atribuir Ordem de Serviço])
+        caso8([Atualizar Status de Ordem])
+        caso9([Pesquisar Equipamentos])
+    end
 
-    %% === Casos de Uso ===
-    UC1[Gerenciar Usuários]
-    UC2[Gerenciar Equipamentos]
-    UC3[Criar Ordem de Serviço]
-    UC4[Atualizar Ordem de Serviço]
-    UC5[Fechar Ordem de Serviço]
-    UC6[Visualizar Ordens de Serviço]
+    Tecnico([Técnico de Manutenção])
+    Gestor([Gerente de Manutenção])
+    Admin([Administrador do Sistema])
+    Usuario([Usuário Comum])
 
     %% === Relacionamentos ===
-    Admin --> UC1
-    Admin --> UC2
-    Admin --> UC6
+    Tecnico --> caso1
+    Tecnico --> caso2
+    Tecnico --> caso3
+    Tecnico --> caso5
+    Tecnico --> caso8
+    Tecnico --> caso9
 
-    User --> UC3
-    User --> UC6
+    Gestor --> caso1
+    Gestor --> caso2
+    Gestor --> caso3
+    Gestor --> caso5
+    Gestor --> caso6
+    Gestor --> caso7
+    Gestor --> caso8
 
-    Technician --> UC4
-    Technician --> UC5
-    Technician --> UC6
+    Admin --> caso1
+    Admin --> caso4
+    Admin --> caso5
+    Admin --> caso6
+
+    Usuario --> caso1
+    Usuario --> caso5
+    Usuario --> caso3
 ```
