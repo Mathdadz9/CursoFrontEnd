@@ -73,6 +73,40 @@ classDiagram
 
     Usuario "1" --> "1+" OrdemDeServico : Responsavel *
     Equipamento "1" --> "1+" OrdemDeServico : associado a*
+```
+ #### Explicação do Diagrama de Classe
+ - Um Usuário (Técnico) por ser responsável por várias Ordens de Servico
+ - Um Equipamento por estar associado a várias Ordens de Serviço
 
-    ```
+ 2. ### Diagrama de Caso de Uso
+ Ilustrar as interações dos diferentes atores com o sistema. 
 
+
+```mermaid
+
+graph TD
+    %% === Atores ===
+    Admin[Administrador]
+    User[Usuário]
+    Technician[Técnico]
+
+    %% === Casos de Uso ===
+    UC1[Gerenciar Usuários]
+    UC2[Gerenciar Equipamentos]
+    UC3[Criar Ordem de Serviço]
+    UC4[Atualizar Ordem de Serviço]
+    UC5[Fechar Ordem de Serviço]
+    UC6[Visualizar Ordens de Serviço]
+
+    %% === Relacionamentos ===
+    Admin --> UC1
+    Admin --> UC2
+    Admin --> UC6
+
+    User --> UC3
+    User --> UC6
+
+    Technician --> UC4
+    Technician --> UC5
+    Technician --> UC6
+```
